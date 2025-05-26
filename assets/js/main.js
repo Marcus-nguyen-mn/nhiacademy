@@ -1,6 +1,7 @@
 jQuery(document).ready(function(){
     sliderBannerTop();
     initHeader();
+    sliderImages();
     AOS.init();
 });
 function sliderBannerTop(){
@@ -87,4 +88,41 @@ function initHeader() {
   });
 
   resetSubmenuDisplay();
+}
+function sliderImages(){ 
+  jQuery('.list-images').slick({
+    centerMode: true,
+    dots: true,
+    centerPadding: '350px',
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '150px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '150px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 }

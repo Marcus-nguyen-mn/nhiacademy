@@ -1,6 +1,14 @@
+@media only screen and (max-width: 1700px) {
+    .mc_images .list-images .item img{
+        height: 540px;
+    }
+}
 @media only screen and (max-width: 1500px) {
     .mc_slider_banner .slider-banner-top .banner-desktop{
         height: 550px;
+    }
+    .mc_images .list-images .item img{
+        height: 400px;
     }
 }
 @media only screen and (max-width: 1400px) {
@@ -14,6 +22,12 @@
     }
     .header-contact a {
         padding: 10px 20px;
+    }
+    .mc_images .list-images .item img{
+        height: 350px;
+    }
+    .mc_images{
+        padding-bottom: 140px;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -37,6 +51,12 @@
     .mc-service-home .contain .item-service .name-service{
         padding: 0 10px;
         font-size: 16px;
+    }
+    .mc_images .list-images .item img{
+        height: 270px;
+    }
+    .mc_images .list-images .item{
+        margin: 0 30px;
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -81,6 +101,9 @@
   .mc_intro .number-tt .item .num{
         font-size: 40px;
   }
+  .mc_images .list-images .item img{
+    height: 368px;
+  }
 }
 @media only screen and (max-width: 876px) {
     .mc_slider_banner .slider-banner-top .banner-desktop{
@@ -121,6 +144,9 @@
     .mc_intro .intro-contain{
         margin-bottom: 60px;
     }
+    .mc_images .list-images .item img{
+        height: 260px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .header-logo img {
@@ -128,6 +154,9 @@
     }
     .sub-header{
         display: none;
+    }
+    .mc_images .mc_images_contain .title{
+        font-size: 40px;
     }
 }
 @media only screen and (max-width: 576px) {
@@ -192,6 +221,27 @@
         max-width: 100%;
         width: 100%;
         margin-bottom: 40px;
+    }
+    .mc_images .list-images .item{
+        margin: 0 10px;
+    }
+    .mc_images .list-images .item img{
+        height: 188px;
+    }
+    .mc_intro{
+        padding-bottom: 50px;
+    }
+    .mc_images .mc_images_contain .sub-title{
+        font-size: 16px;
+    }
+    .mc_images .mc_images_contain .title{
+        font-size: 30px;
+    }
+    .mc_images .mc_images_contain .title{
+        margin-bottom: 40px;
+    }
+    .mc_images{
+        padding-bottom: 70px;
     }
 }
 @media only screen and (max-width: 438px) {

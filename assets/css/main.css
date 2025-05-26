@@ -712,3 +712,62 @@ background-position: center 62%;
 .mc_intro{
   padding-bottom: 120px;
 }
+.mc_images .mc_images_contain .sub-title{
+  color: #878787;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.mc_images .mc_images_contain .title{
+  color: #C28934;
+  text-align: center;
+  font-size: 54px;
+  font-family: 'PlayfairDisplay-Regular';
+  max-width: 818px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.mc_images .list-images .item{
+  margin: 0 45px;
+  border-radius: 20px;
+}
+.mc_images .list-images .item img{
+  height: 620px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.mc_images .slick-prev, .mc_images .slick-next{
+  display: none !important;
+}
+.mc_images{
+  padding-bottom: 200px;
+  position: relative;
+}
+.mc_images .bg-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.mc_images .mc_images_contain{
+  position: relative;
+  z-index: 2;
+}
+.mc_images .slick-dots{
+    bottom: -40px;
+}
+.mc_images .slick-dots li.slick-active{
+    width: 29px;
+    height: 12px;
+    background: #fff;
+    border-radius: 12px;
+}
+.mc_images .slick-dots li{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+.mc_images .slick-dots li button:before{
+    display: none;
+}

@@ -16,7 +16,7 @@
                 if ($services) {
                     $first_post = $services[0];
                 ?>
-                    <div class="item-service item-service-1">
+                    <a href="<?php the_permalink($first_post->ID); ?>" class="item-service item-service-1">
                         <div class="thumb">
                             <img src="<?php echo get_the_post_thumbnail_url($first_post->ID) ?>" alt="Thumb">
                         </div>
@@ -25,12 +25,12 @@
                             echo get_the_title($first_post->ID);
                             ?>
                         </div>
-                    </div>
+                    </a>
                     <?php
                     if ($services[1]) {
                         $sec_post = $services[1];
                     ?>
-                        <div class="item-service item-service-2">
+                        <a href="<?php the_permalink($sec_post->ID); ?>" class="item-service item-service-2">
                             <div class="thumb">
                                 <img src="<?php echo get_the_post_thumbnail_url($sec_post->ID) ?>" alt="Thumb">
                             </div>
@@ -39,13 +39,13 @@
                                 echo get_the_title($sec_post->ID);
                                 ?>
                             </div>
-                        </div>
+                        </a>
                     <?php } ?>
                     <?php
                     if ($services[2]) {
                         $three_post = $services[2];
                     ?>
-                        <div class="item-service item-service-3">
+                        <a href="<?php the_permalink($three_post->ID); ?>" class="item-service item-service-3">
                             <div class="thumb">
                                 <img src="<?php echo get_the_post_thumbnail_url($three_post->ID) ?>" alt="Thumb">
                             </div>
@@ -54,13 +54,13 @@
                                 echo get_the_title($three_post->ID);
                                 ?>
                             </div>
-                        </div>
+                        </a>
                     <?php } ?>
                     <?php
                     if ($services[3]) {
                         $four_post = $services[3];
                     ?>
-                        <div class="item-service item-service-4">
+                        <a href="<?php the_permalink($four_post->ID); ?>" class="item-service item-service-4">
                             <div class="thumb">
                                 <img src="<?php echo get_the_post_thumbnail_url($four_post->ID) ?>" alt="Thumb">
                             </div>
@@ -69,7 +69,7 @@
                                 echo get_the_title($four_post->ID);
                                 ?>
                             </div>
-                        </div>
+                        </a>
                     <?php } ?>
                 <?php
                 }
