@@ -15,8 +15,82 @@
 </head>
 
 <body <?php body_class(); ?> id='top'>
-    <?php
-    wp_nav_menu(array(
-        'theme_location' => 'main_menu',
-    ));
-    ?>
+    <div class="sub-header">
+        <div class="mc-container">
+            <div class="row-sub-head">
+                <div class="left">
+                    <div class="left-cover">
+                        <div class="item">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/address.png" alt="Phone">
+                            <div class="txt">
+                                Brooklyn, NY 10036, United States
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-cover">
+                        <div class="right-item">
+                            <a href="#" class="item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
+                                <div class="txt">
+                                    +1 800-123-1234
+                                </div>
+                            </a>
+                            <a href="#" class="item">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/letter.png" alt="Email">
+                                <div class="txt">
+                                    example@physiozen.com
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mc-cover-header-main">
+        <div class="mc-container">
+            <header>
+                <a href="<?php echo site_url(); ?>" class="header-logo">
+                    <img src="<?php echo get_field("logo_main", "option"); ?>" alt="Header logo" />
+                </a>
+                <div class="mc_menu_head_main">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main_menu',
+                    ));
+                    ?>
+                </div>
+                <div class="header-contact">
+                    <a href="<?php echo site_url("lien-he"); ?>">Đặt hẹn</a>
+                </div>
+                <div class="burger-menu">
+                    <img src="<?php echo get_template_directory_uri();
+                                ?>/assets/images/burger-menu.svg" alt="" />
+                </div>
+                <div class="side-popup-overlay" id="popupOverlay">
+                    <button class="close-popup" id="closePopup">✕</button>
+                    <div class="side-popup" id="sidePopup">
+                        <div class="header-logo">
+                            <img src="<?php echo get_field("logo_footer_main", "option"); ?>" alt="Header logo" />
+                        </div>
+                        <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'main_menu',
+                        ));
+                        ?>
+                        <div class="contact-control">
+                            <a href="tel: 1900 2222"><img src="<?php echo get_template_directory_uri();
+                                                                ?>/assets/images/header-phone.svg" alt="Phone icon" />
+                                1900 2222</a>
+                            <a href="<?php echo site_url("lien-he"); ?>"><img
+                                    src="<?php echo get_template_directory_uri();
+                                            ?>/assets/images/header-calendar.svg"
+                                    alt="Calendar icon" />Đặt lịch</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
