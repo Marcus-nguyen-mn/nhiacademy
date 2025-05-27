@@ -21,6 +21,7 @@ get_template_part('sections/common/slider-top');
     <?php
     get_template_part('sections/home/form');
     get_template_part('sections/home/news');
+    get_template_part('sections/common/footer');
     ?>
 </div>
 <?php get_footer(); ?>

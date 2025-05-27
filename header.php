@@ -23,7 +23,7 @@
                         <div class="item">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/address.png" alt="Phone">
                             <div class="txt">
-                                Brooklyn, NY 10036, United States
+                                <?php echo get_field("address_footer", "option"); ?>
                             </div>
                         </div>
                     </div>
@@ -31,13 +31,13 @@
                 <div class="right">
                     <div class="right-cover">
                         <div class="right-item">
-                            <a href="#" class="item">
+                            <a href="tel:<?php echo get_field("sdt_footer", "option"); ?>" class="item">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
                                 <div class="txt">
-                                    +1 800-123-1234
+                                    <?php echo get_field("sdt_footer", "option"); ?>
                                 </div>
                             </a>
-                            <a href="#" class="item">
+                            <a href="mailto:<?php echo get_field("email_footer", "option"); ?>" class="item">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/letter.png" alt="Email">
                                 <div class="txt">
                                     example@physiozen.com

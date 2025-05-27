@@ -1050,6 +1050,7 @@ background-position: center 62%;
 }
 .list-post-news .title-post{
   font-size: 22px;
+  font-family: 'OpenSans-Bold';
 }
 .mc_news .slick-prev, .mc_news .slick-next{
     display: none !important;
@@ -1071,4 +1072,84 @@ background-position: center 62%;
 }
 .mc_news .slick-dots li button:before{
     display: none;
+}
+.mc_footer .mc_footer_contain{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+.mc_footer .mc_footer_contain .logo-and-social{
+  flex: 0 0 35%;
+  max-width: 33%;
+  width: 100%;
+}
+.mc_footer .mc_footer_contain .item-list-footer{
+  flex: 0 0 20%;
+  max-width: 18%;
+  width: 100%;
+  padding-right: 20px;
+}
+.mc_footer .mc_footer_contain .info-footer{
+  flex: 0 0 25%;
+  max-width: 25%;
+  width: 100%;
+  padding-left: 30px;
+}
+.mc_footer .mc_footer_contain .logo-and-social img{
+  width: 162px;
+  margin-bottom: 40px;
+}
+.mc_footer .mc_footer_contain .logo-and-social .social-footer{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.mc_footer .mc_footer_contain .logo-and-social .social-footer a{
+  width: 48px;
+  display: block;
+  margin-right: 10px;
+}
+.mc_footer .mc_footer_contain .logo-and-social .social-footer img{
+  width: 100%;
+}
+.mc_footer{
+  padding-top: 100px;
+  border-top: 1px solid #80808021;
+}
+.mc_footer .item-list-footer h3{
+  font-size: 24px;
+  font-family: 'OpenSans-Bold';
+  margin-bottom: 20px;
+}
+.mc_footer .item-list-footer li{
+  margin-bottom: 15px;
+}
+.mc_footer .item-list-footer a{
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+}
+.mc_footer .item-list-footer a:hover{
+  color: #c28934;
+  text-decoration: underline;
+}
+.mc_footer .mc_footer_contain .info-footer .address{
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+  margin-bottom: 25px;
+}
+.mc_footer .mc_footer_contain .info-footer .phone{
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+  margin-bottom: 25px;
+}
+.mc_footer .mc_footer_contain .info-footer .email{
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+}
+.sub-footer{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+  padding-bottom: 35px;
 }
