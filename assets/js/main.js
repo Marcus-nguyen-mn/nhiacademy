@@ -2,6 +2,7 @@ jQuery(document).ready(function(){
     sliderBannerTop();
     initHeader();
     sliderImages();
+    sliderCustomersTalk();
     AOS.init();
 });
 function sliderBannerTop(){
@@ -124,5 +125,18 @@ function sliderImages(){
         }
       }
     ]
+  });
+}
+function sliderCustomersTalk(){
+  jQuery('.mc-slider-cs-talk').slick({
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    verticalSwiping: true,
+    infinite: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="../wp-content/themes/mc-theme/assets/images/prev-ver.png" alt="Prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../wp-content/themes/mc-theme/assets/images/next-ver.png" alt="Next"></button>',
   });
 }

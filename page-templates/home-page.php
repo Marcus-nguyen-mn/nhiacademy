@@ -13,6 +13,7 @@ get_template_part('sections/common/slider-top');
     get_template_part('sections/home/service');
     get_template_part('sections/home/intro');
     get_template_part('sections/home/image');
+    get_template_part('sections/home/customers');
     ?>
 </div>
 <?php get_footer(); ?>

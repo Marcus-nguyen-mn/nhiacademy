@@ -58,6 +58,14 @@
     .mc_images .list-images .item{
         margin: 0 30px;
     }
+    .mc_customers .left-slider .item .right-cus-talk{
+        flex: 0 0 78%;
+        max-width: 78%;
+    }
+    .mc_customers .left-slider .item .avatar{
+        flex: 0 0 22%;
+        max-width: 22%;
+    }
 }
 @media only screen and (max-width: 1024px) {
   header {
@@ -104,6 +112,13 @@
   .mc_images .list-images .item img{
     height: 368px;
   }
+  .mc_customers .customer-cover .left{
+    padding-right: 0;
+  }
+  .mc_customers .left-slider .item .avatar img{
+        width: 70px;
+        height: 70px;
+  }
 }
 @media only screen and (max-width: 876px) {
     .mc_slider_banner .slider-banner-top .banner-desktop{
@@ -146,6 +161,34 @@
     }
     .mc_images .list-images .item img{
         height: 260px;
+    }
+    .mc_customers .customer-cover .left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 2;
+    }
+     .mc_customers .customer-cover .right{
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 1;
+    }
+    .mc_customers .title{
+        margin-bottom: 80px;
+    }
+    .mc_customers .customer-cover .right{
+        margin-bottom: 100px;
+    }
+    .mc_customers .left-slider .item .avatar img{
+        width: 90px;
+        height: 90px;
+    }
+    .mc_customers .left-slider .item .avatar{
+        flex: 0 0 18%;
+        max-width: 18%;
+    }
+    .mc_customers .left-slider .item .right-cus-talk{
+        flex: 0 0 82%;
+        max-width: 82%;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -242,6 +285,24 @@
     }
     .mc_images{
         padding-bottom: 70px;
+    }
+    .mc_customers .sub-title{
+        font-size: 16px;
+    }
+    .mc_customers .title{
+        font-size: 30px; 
+        margin-bottom: 50px;
+    }
+    .mc_customers .customer-cover .right img{
+        max-width: 80%;
+    }
+    .mc_customers .left-slider .item .avatar{
+        flex: 0 0 34%;
+        max-width: 34%;
+    }
+    .mc_customers .left-slider .item .right-cus-talk{
+        flex: 0 0 66%;
+        max-width: 66%;
     }
 }
 @media only screen and (max-width: 438px) {
