@@ -254,6 +254,11 @@
         flex: 0 0 50%;
         max-width: 48%;
     }
+    .mc-list-page .list .list-post-news .item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 768px) {
     .header-logo img {
@@ -465,6 +470,19 @@
     .mc_intro_abus .list-tc .item .content-item{
         flex: 0 0 75%;
         max-width: 75%;
+    }
+    .mc-list-page .list .list-post-news .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc-list-page{
+        padding: 70px 0;
+    }
+    .mc-list-page .title-list{
+        font-size: 30px;
+    }
+    .mc-list-page .sub-title-list{
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 438px) {

@@ -156,7 +156,7 @@ header {
 
 .mc_menu_head_main ul.sub-menu {
   position: absolute;
-  width: 15rem !important;
+  width: 17rem !important;
   top: 100%;
   left: 0;
   background: #fff;
@@ -171,7 +171,6 @@ header {
   width: 100%;
   padding: 10px 6px;
   border-radius: 10px;
-  white-space: nowrap;
   position: relative;
 }
 .mc_menu_head_main ul.sub-menu li:hover {
@@ -1199,4 +1198,62 @@ background-position: center 62%;
 }
 .abu-st-main .mc-form{
   padding-top: 0;
+}
+.mc-list-page{
+  padding: 120px 0;
+}
+.mc-list-page .title-list{
+    font-family: 'PlayfairDisplay-Regular';
+    font-size: 76px;
+    color: #C28934;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mc-list-page .sub-title-list{
+  font-size: 20px;
+  color: #878787;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.mc-list-page .list .list-post-news{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.mc-list-page .list .list-post-news .item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 !important;
+  margin-bottom: 30px !important;
+}
+.mc-pagination .screen-reader-text {
+    display: none;
+}
+.mc-pagination .nav-links{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.pagination .page-numbers{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  border: 1px solid #d1b071;
+  margin-bottom: 10px;
+}
+.pagination .page-numbers.current{
+  background: #d1b071;
+  color: #fff;
 }
