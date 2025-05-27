@@ -275,6 +275,9 @@
         max-width: 50%;
         width: 100%;
     }
+    .post-container{
+        max-width: 90%;
+    }
 }
 @media only screen and (max-width: 768px) {
     .header-logo img {
@@ -540,6 +543,12 @@
     }
     .info-maps .info-maps-cover .left .img-mh img{
         height: 715px;
+    }
+    .post-title{
+        font-size: 30px;
+    }
+    .mcp-page .mc-form{
+        padding: 50px 0;
     }
 }
 @media only screen and (max-width: 438px) {

@@ -1,96 +1,45 @@
 <?php
 get_header();
 ?>
-<section class="single_projects">
-    <div class="head-single-project">
-        <div class="sing-container">
-            <div class="hsp-row">
-                <div class="left-content">
-                    <div class="sub-title">
-                        <?php echo "Bài viết" ?>
+<div class="home-cover-1 mcp-page">
+    <div class="post-content">
+        <?php
+        if (have_posts()):
+            while (have_posts()) : the_post();
+        ?>
+                <div class="post-container">
+                    <div class="post-breadcrumbs">
+                        <p><?php echo get_the_date(); ?></p>
+                        <p>
+                            <strong>Trang chủ</strong> <span style="margin: 0 6px;">|</span>
+                            <strong><?php echo get_the_title(); ?></strong>
+                        </p>
                     </div>
-                    <div class="main-title">
+
+                    <h1 class="post-title">
                         <?php echo get_the_title(); ?>
+                    </h1>
+
+                    <div class="post-meta">
+                        <p><span>Tác giả: <?php if (get_the_author()) {
+                                                echo get_the_author();
+                                            } else {
+                                                echo "Diva";
+                                            }  ?></span></p>
                     </div>
-                    <div class="sub-desc">
-                        <?php echo get_field("hsp_sub_descripts"); ?>
-                    </div>
-                    <div class="desc">
-                        <?php echo get_the_excerpt(); ?>
+
+                    <div class="mc-content-post-single">
+                        <?php the_content(); ?>
                     </div>
                 </div>
-                <div class="right-img">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Thumb">
-                </div>
-            </div>
-        </div>
+        <?php
+            endwhile;
+        endif;
+        ?>
     </div>
-    <div class="hsp-content-cover">
-        <div class="sing-container">
-            <div class="hsc-row">
-                <div class="left-content">
-                    <?php the_content(); ?>
-                </div>
-                <div class="right-side-bar">
-                    <div class="project-lq">
-                        <div class="title-project-lq">
-                            Các bài viết khác
-                        </div>
-                        <div class="list-project">
-                            <?php
-                            $args = array(
-                                'post_type' => 'post',
-                                'post_status' => 'publish',
-                                'posts_per_page' => 5
-                            );
-                            $blogs = new WP_Query($args);
-                            if ($blogs->have_posts()) :
-                                while ($blogs->have_posts()) : $blogs->the_post();
-                            ?>
-                                    <a href="<?php the_permalink(); ?>" class="item">
-                                        <div class="thumb-projects">
-                                            <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo get_the_title(); ?>" />
-                                        </div>
-                                        <div class="name-project">
-                                            <?php echo get_the_title(); ?>
-                                        </div>
-                                    </a>
-                            <?php
-                                endwhile;
-                            endif;
-
-                            // Reset Post Data
-                            wp_reset_postdata();
-
-                            ?>
-                        </div>
-                    </div>
-                    <div class="typ-cat-cover">
-                        <div class="title">
-                            Chuyên mục
-                        </div>
-                        <div class="type-cat">
-                            <?php
-                            $categories = get_categories();
-                            foreach ($categories as $category) {
-                            ?>
-                                <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="item-type-cat">
-                                    <?php echo esc_html($category->name); ?>
-                                </a>
-                            <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="banner-qc">
-                        <a href="<?php echo get_field("link_qc_projects_detail_1", "option"); ?>">
-                            <img src="<?php echo get_field("img_qc_projects_detail_1", "option"); ?>" alt="QC">
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <?php
+    get_template_part('sections/home/form');
+    get_template_part('sections/common/footer');
+    ?>
+</div>
 <?php get_footer(); ?>
