@@ -1153,3 +1153,50 @@ background-position: center 62%;
   font-family: 'OpenSans-Light';
   padding-bottom: 35px;
 }
+.mc_intro_abus .list-tc .item{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.mc_intro_abus .list-tc .item .icon{
+  flex: 0 0 22%;
+  max-width: 22%;
+  width: 100%;
+}
+.mc_intro_abus .list-tc .item .icon img{
+  width: 72px;
+}
+.mc_intro_abus .list-tc .item .content-item{
+  flex: 0 0 78%;
+  max-width: 78%;
+  width: 100%;
+}
+.mc_intro_abus .list-tc .item .tt{
+  font-family: 'PlayfairDisplay-Regular';
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #000;
+}
+.mc_intro_abus .list-tc .item .desc{
+  font-size: 16px;
+  font-family: 'OpenSans-Light';
+  line-height: 25px;
+}
+.mc_intro_abus .list-tc{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.mc_intro_abus .list-tc .item-cover{
+  flex: 0 0 33.33%;
+  max-width: 32%;
+  width: 100%;
+}
+.mc_intro_abus{
+  padding-top: 120px;
+}
+.abu-st-main .mc-form{
+  padding-top: 0;
+}
