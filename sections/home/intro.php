@@ -1,7 +1,7 @@
-<section class="mc_intro">
+<section class="mc_intro mc-ovex-hid mc-ovey-hid">
     <div class="mc-container">
         <div class="intro-contain">
-            <div class="left">
+            <div class="left" data-aos="fade-right" data-aos-duration="1200">
                 <div class="sub-title">
                     <?php echo get_field("sub_title_intro_common"); ?>
                 </div>
@@ -35,11 +35,11 @@
                     ?>
                 </div>
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left" data-aos-duration="1200">
                 <img src="<?php echo get_field("ha_mh_intro_common"); ?>" alt="Hình ảnh">
             </div>
         </div>
-        <div class="number-tt">
+        <div class="number-tt" data-aos="fade-up" data-aos-duration="1200">
             <?php
             if (have_rows("sltt_intro_common")):
                 while (have_rows("sltt_intro_common")) : the_row();

@@ -1,10 +1,10 @@
-<section class="mc_customers">
+<section class="mc_customers mc-ovex-hid">
     <div class="mc-container">
         <div class="mc_customer_contain">
-            <div class="sub-title">
+            <div class="sub-title" data-aos="fade-up" data-aos-duration="1200">
                 <?php echo get_field("small_title_kh"); ?>
             </div>
-            <div class="title">
+            <div class="title" data-aos="fade-up" data-aos-duration="1400">
                 <?php echo get_field("title_kh"); ?>
             </div>
             <div class="customer-cover">
@@ -42,7 +42,7 @@
                         ?>
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" data-aos="fade-left" data-aos-duration="1400">
                     <img src="<?php echo get_field("img_mh_cs_talk"); ?>" alt="Khách hàng nói gì">
                 </div>
             </div>

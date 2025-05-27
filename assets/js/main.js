@@ -98,6 +98,8 @@ function sliderImages(){
     dots: true,
     centerPadding: '350px',
     slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1025,
@@ -138,6 +140,10 @@ function sliderCustomersTalk(){
     dots: false,
     verticalSwiping: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,  // tắt kéo chuột (desktop)
+    swipe: false,      // tắt vuốt cảm ứng (mobile)
     prevArrow: '<button type="button" class="slick-prev"><img src="../wp-content/themes/mc-theme/assets/images/prev-ver.png" alt="Prev"></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="../wp-content/themes/mc-theme/assets/images/next-ver.png" alt="Next"></button>',
   });
@@ -182,6 +188,8 @@ function sliderNews(){
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,

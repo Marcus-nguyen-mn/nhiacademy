@@ -1,9 +1,9 @@
-<section class="mc_images">
+<section class="mc_images mc-ovex-hid">
     <div class="mc_images_contain">
-        <div class="sub-title">
+        <div class="sub-title" data-aos="fade-up" data-aos-duration="1200">
             <?php echo get_field("sub_title_hatt"); ?>
         </div>
-        <div class="title">
+        <div class="title" data-aos="fade-up" data-aos-duration="1400">
             <?php echo get_field("title_hatt"); ?>
         </div>
         <div class="list-images">
