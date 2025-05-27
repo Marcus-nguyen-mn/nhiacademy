@@ -334,6 +334,37 @@
     .mc-video video{
        height: 330px;
     }
+    .mc-form{
+        padding: 50px 0;
+    }
+    .mc-form .sub-title{
+        font-size: 16px;
+    }
+    .mc-form .title{
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .mc-form .form-contain .left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 55px;
+    }
+    .mc-form .form-contain .right{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc-form .form-contain .right .title-form{
+        font-size: 25px;
+    }
+    .mc-form .form-contain .inp-st input{
+        padding: 15px 20px;
+    }
+    .mc-form .button-form{
+        margin-top: 45px;
+    }
+    .mc-form .button-form button{
+        font-size: 20px;
+    }
 }
 @media only screen and (max-width: 438px) {
 

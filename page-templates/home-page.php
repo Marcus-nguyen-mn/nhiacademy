@@ -17,4 +17,9 @@ get_template_part('sections/common/slider-top');
     get_template_part('sections/home/video');
     ?>
 </div>
+<div class="home-cover-2">
+    <?php
+    get_template_part('sections/home/form');
+    ?>
+</div>
 <?php get_footer(); ?>
