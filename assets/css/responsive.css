@@ -78,6 +78,18 @@
     .mc-video video{
         height: 600px;
     }
+    .info-maps .info-maps-cover .left .left-cover .left-content{
+        padding: 30px;
+    }
+    .info-maps-cover .left .left-cover .left-content .title-left{
+        margin-bottom: 25px;
+    }
+    .info-maps-cover .left .left-cover .left-content .desc-left{
+        margin-bottom: 25px;
+    }
+    .info-maps-cover .left .left-cover .left-content .info-left .item{
+        margin-bottom: 20px;
+    }
 }
 @media only screen and (max-width: 1024px) {
   header {
@@ -169,6 +181,10 @@
     .mc_intro_abus .list-tc .item .content-item{
         flex: 0 0 88%;
         max-width: 88%;
+    }
+    .info-maps .info-maps-cover .left .left-cover .left-content{
+        width: 90%;
+        height: 90%;
     }
 }
 @media only screen and (max-width: 876px) {
@@ -269,6 +285,17 @@
     }
     .mc_images .mc_images_contain .title{
         font-size: 40px;
+    }
+    .info-maps .info-maps-cover .left{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .info-maps .info-maps-cover .right{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .info-maps-cover .right iframe{
+        height: 500px;
     }
 }
 @media only screen and (max-width: 576px) {
@@ -483,6 +510,36 @@
     }
     .mc-list-page .sub-title-list{
         font-size: 16px;
+    }
+    .info-maps{
+        padding-top: 50px;
+    }
+    .info-maps .info-maps-cover .left .left-cover .left-content{
+        padding: 20px;
+    }
+    .info-maps-cover .left .left-cover .left-content .title-left{
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .info-maps-cover .left .left-cover .left-content .desc-left{
+        font-size: 14px;
+        line-height: 23px;
+    }
+    .info-maps-cover .left .left-cover .left-content .title-content-info{
+        font-size: 16px;
+    }
+    .info-maps-cover .left .left-cover .left-content .item-icon{
+        width: 12%;
+    }
+    .info-maps-cover .left .left-cover .left-content .info-content{
+        width: 88%;
+        padding-left: 0;
+    }
+    .info-maps-cover .left .left-cover .left-content .detail{
+        font-size: 15px;
+    }
+    .info-maps .info-maps-cover .left .img-mh img{
+        height: 715px;
     }
 }
 @media only screen and (max-width: 438px) {
