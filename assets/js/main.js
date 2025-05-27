@@ -3,6 +3,7 @@ jQuery(document).ready(function(){
     initHeader();
     sliderImages();
     sliderCustomersTalk();
+    handlerVideo();
     AOS.init();
 });
 function sliderBannerTop(){
@@ -139,4 +140,37 @@ function sliderCustomersTalk(){
     prevArrow: '<button type="button" class="slick-prev"><img src="../wp-content/themes/mc-theme/assets/images/prev-ver.png" alt="Prev"></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="../wp-content/themes/mc-theme/assets/images/next-ver.png" alt="Next"></button>',
   });
+}
+function handlerVideo(){
+  let videoCover = document.getElementById('videoCover');
+  let iconPlay = document.querySelector(".icon-play");
+  if(videoCover){
+    videoCover.addEventListener('click', function() {
+      const videoUrl = this.getAttribute('data-link');
+      const videoDisplay = document.getElementById('handlerVideoDisplay');
+      videoDisplay.innerHTML = `
+        <video controls autoplay>
+          <source src="${videoUrl}" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+      `;
+      videoCover.style.display = "none";
+      iconPlay.style.display = "none";
+    });
+  }
+  if(iconPlay){
+    iconPlay.addEventListener('click', function() {
+      const videoUrl = this.getAttribute('data-link');
+      const videoDisplay = document.getElementById('handlerVideoDisplay');
+      videoDisplay.innerHTML = `
+        <video controls autoplay>
+          <source src="${videoUrl}" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ thẻ video.
+        </video>
+      `;
+      videoCover.style.display = "none";
+      iconPlay.style.display = "none";
+    });
+  }
+  
 }
