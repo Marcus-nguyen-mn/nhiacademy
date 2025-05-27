@@ -5,7 +5,17 @@ jQuery(document).ready(function(){
     sliderCustomersTalk();
     handlerVideo();
     sliderNews();
+    formRegister(
+        ".btn-sub-form",
+        "form-Contact",
+        ".form-Contact",
+        "#fnameSave",
+        "#phoneSave",
+        ".phoneValSave",
+        ".nameValSave"
+    );
     AOS.init();
+    handlerMenuFixed();
 });
 function sliderBannerTop(){
     jQuery('.slider-banner-top').slick({
@@ -215,5 +225,115 @@ function sliderNews(){
         }
       }
     ]
+  });
+}
+
+function formRegister(
+  buttonClass,
+  formClass,
+  dataClass,
+  idHoTen,
+  idSdt,
+  phoneVal,
+  nameVal
+) {
+  
+  var submit = jQuery(buttonClass);
+  submit.click(function () {
+    var hoTen = document.forms[formClass]["hoTenSave"].value;
+    var sdt = document.forms[formClass]["SdtSave"].value;
+    var remove_space = jQuery.trim(sdt.replace(/ /g, ""));
+    var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+    let selectedTime = document.querySelector('input[name="time"]:checked');
+    let timecheck = document.getElementById('timecheck');
+    if(selectedTime){
+      timecheck.value = selectedTime.value;
+    }
+    if (hoTen == "" || sdt == "") {
+      if (hoTen == "") {
+        jQuery(nameVal).css("display", "block");
+      }
+      jQuery(idHoTen).click(function () {
+        jQuery(nameVal).css("display", "none");
+      });
+      if (sdt !== "") {
+        if (vnf_regex.test(remove_space) == false) {
+          jQuery(phoneVal)
+            .empty()
+            .append("<span>Số điện thoại không đúng định dạng!</span>");
+          jQuery(phoneVal).css("display", "block");
+        } else {
+          jQuery(phoneVal).empty().append("<span>Số điện thoại hợp lệ!</span>");
+          jQuery(phoneVal).css("display", "block");
+        }
+      } else {
+        jQuery(phoneVal).empty().append("Bạn chưa nhập số điện thoại!");
+        jQuery(phoneVal).css("display", "block");
+      }
+      jQuery(idSdt).click(function () {
+        jQuery(phoneVal).css("display", "none");
+      });
+      return false;
+    }
+    if (hoTen !== "" || sdt !== "") {
+      if (vnf_regex.test(remove_space) == false) {
+        jQuery(phoneVal)
+          .empty()
+          .append("<span>Số điện thoại không đúng định dạng!</span>");
+        jQuery(phoneVal).css("display", "block");
+      } else {
+        jQuery(".watting").css("display", "block");
+        var data = jQuery(dataClass).serialize();
+        jQuery.ajax({
+          type: "GET",
+          url: "https://script.google.com/macros/s/AKfycbwMbsvulAxgSb4y0qw1amFiltc1zd7A4CsYRzpuSsl8e-p1rWuU02m5cRHY6EUxFA4XHQ/exec",
+          dataType: "json",
+          crossDomain: true,
+          data: data,
+          success: function (data) {
+            if (data == "false") {
+              alert("Thêm không thành công");
+              location.reload();
+            } else {
+              alert("Cảm ơn quý khách đã đăng ký. Chúng tôi sẽ liên hệ với bạn vào khoảng thời gian sớm nhất !");
+              location.reload();
+            }
+          },
+        });
+        return false;
+      }
+      return false;
+    } else {
+      var data = jQuery(formClass).serialize();
+      jQuery.ajax({
+        type: "GET",
+        url: "https://script.google.com/macros/s/AKfycbwMbsvulAxgSb4y0qw1amFiltc1zd7A4CsYRzpuSsl8e-p1rWuU02m5cRHY6EUxFA4XHQ/exec",
+        dataType: "json",
+        crossDomain: true,
+        data: data,
+        success: function (data) {
+          if (data == "false") {
+            alert("Thêm không thành công");
+            location.reload();
+          } else {
+            alert("Cảm ơn quý khách đã đăng ký. Chúng tôi sẽ liên hệ với bạn vào khoảng thời gian sớm nhất !");
+            location.reload();
+          }
+        },
+      });
+      return false;
+    }
+  });
+}
+function handlerMenuFixed(){
+  window.addEventListener('scroll', function() {
+    const menu = document.getElementById('HandlerMenu');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    if(scrollPosition > 100) {
+      menu.classList.add('active');
+    } else {
+      menu.classList.remove('active');
+    }
   });
 }

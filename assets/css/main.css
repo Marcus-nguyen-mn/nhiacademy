@@ -119,7 +119,9 @@ header {
 .header-logo img {
   height: 90px;
 }
-
+.header-logo.mc-logo-mg-pop img{
+  height: auto;
+}
 .mc_menu_head_main ul,
 .side-popup-overlay ul {
   display: flex;
@@ -412,7 +414,7 @@ header {
   height: 40px;
 }
 .side-popup-overlay .contact-control a {
-  width: 50%;
+  width: 60%;
   height: 100%;
   border-radius: 30px;
   background: linear-gradient(90deg, #cb9849 0%, #9e6e00 100%);
@@ -1442,4 +1444,29 @@ background-position: center 62%;
 }
 .mc-ovey-hid{
   overflow-y: hidden;
+}
+.nameValSave, .phoneValSave{
+  color: red;
+  margin-top: 5px;
+  display: none;
+}
+.watting{
+  margin-top: 5px;
+  text-align: center;
+  color: red;
+  display: none;
+}
+.mc-fixed-header.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0px 2px 3px #fffde0;
+}
+.mc-fixed-header.active .sub-header{
+  display: none;
+}
+.mc-cover-header-main{
+  background-color: #fff;
 }

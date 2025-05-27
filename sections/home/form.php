@@ -15,17 +15,24 @@
                     <div class="title-form">
                         Đặt lịch ngay
                     </div>
-                    <form>
+                    <form class="form-Contact" name="form-Contact" id="form-Contact">
                         <div class="inp-st">
-                            <input type="text" placeholder="Họ tên" />
+                            <input type="text" id="fnameSave" name="hoTenSave" placeholder="Họ tên" />
+                            <p class="nameValSave">Bạn chưa điền họ và tên</p>
                         </div>
                         <div class="inp-st">
-                            <input type="text" placeholder="Số điện thoại" />
+                            <input type="text" id="phoneSave" name="SdtSave" placeholder="Số điện thoại" />
+                            <p class="phoneValSave">Bạn chưa điền số điện thoại</p>
                         </div>
                         <div class="inp-st">
-                            <input type="text" placeholder="Ghi chú" />
+                            <input type="text" name="noteForm" placeholder="Ghi chú" />
                         </div>
+                        <div class="watting">Quý khách vui lòng chờ trong giây lát !</div>
                         <div class="button-form">
+                            <?php $url      = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+                            $validURL = str_replace("&", "&amp", $url); ?>
+                            <input type="hidden" id="Dat_lichURL_save" class="" value="<?php echo $validURL; ?>" name="URL_DKN_Save">
+                            <input type="hidden" id="ngay_dang_ky_save" class="" value="<?php echo date("G:i - d/m/Y"); ?>" name="DateSave">
                             <button type="button" class="btn-sub-form">Nhận tư vấn</button>
                         </div>
                     </form>
