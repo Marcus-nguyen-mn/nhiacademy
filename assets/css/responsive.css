@@ -140,6 +140,9 @@
   .mc-video video{
         height: 455px;
     }
+    .list-post-news .item .thumb img{
+        height: 200px;
+    }
 }
 @media only screen and (max-width: 876px) {
     .mc_slider_banner .slider-banner-top .banner-desktop{
@@ -364,6 +367,16 @@
     }
     .mc-form .button-form button{
         font-size: 20px;
+    }
+    .mc_news .sub-title{
+        font-size: 16px;
+    }
+    .mc_news .title{
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .mc_news{
+        padding-top: 30px;
     }
 }
 @media only screen and (max-width: 438px) {

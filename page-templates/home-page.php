@@ -20,6 +20,7 @@ get_template_part('sections/common/slider-top');
 <div class="home-cover-2">
     <?php
     get_template_part('sections/home/form');
+    get_template_part('sections/home/news');
     ?>
 </div>
 <?php get_footer(); ?>
